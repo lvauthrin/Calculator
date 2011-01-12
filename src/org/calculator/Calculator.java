@@ -66,6 +66,8 @@ public class Calculator {
         List<Token> tokens = new ArrayList<Token>();        
         Scanner scanner = new Scanner(equation);
 
+        scanner.useDelimiter("\\p{javaWhitespace}*");
+        
         if (!scanner.hasNextDouble()) {
             throw new Exception("Invalid equation.");
         }
