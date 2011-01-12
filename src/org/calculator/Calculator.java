@@ -124,7 +124,7 @@ public class Calculator {
         String input = null;
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
-        while ((input = in.readLine()) != "") {
+        while (!(input = in.readLine()).equals("quit")) {
             try {
                 List<Token> tokens = calculator.createTokens(input);
                 System.out.println(input + " = " + calculator.calculate(tokens));
